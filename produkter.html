@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Våra produkter | FastFireUF</title>
+  <link rel="icon" type="image/jpg" href="loggan.JPG">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      color: #fff;
+      background: url('https://images.unsplash.com/photo-1448375240586-882707db888b?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170') no-repeat center center fixed;
+      background-size: cover;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      background: rgba(44, 18, 12, 0.8);
+      padding: 1rem 2rem;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.6);
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 10;
+    }
+
+    header .logo {
+      width: 70px;
+      height: auto;
+      border-radius: 8px;
+      margin-right: 12px;
+      object-fit: contain;
+      box-shadow: 0 0 15px rgba(255, 100, 0, 0.7),
+                  0 0 30px rgba(255, 60, 0, 0.4);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    header .logo:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 25px rgba(255, 130, 0, 0.9),
+                  0 0 45px rgba(255, 80, 0, 0.6);
+    }
+
+    header h1 {
+      color: #ff7a1f;
+      font-size: 1.6rem;
+      letter-spacing: 1px;
+      margin: 0;
+      text-shadow: 0 0 10px rgba(255, 120, 40, 0.8);
+      transition: text-shadow 0.3s ease, color 0.3s ease;
+      cursor: pointer;
+    }
+
+    header h1:hover {
+      color: #ff9b40;
+      text-shadow: 0 0 25px rgba(255, 150, 60, 1);
+    }
+
+    main {
+      flex: 1;
+      margin-top: 130px;
+      padding: 2rem;
+      text-align: center;
+      background: rgba(0,0,0,0.4);
+    }
+
+    h2 {
+      font-size: 2.5rem;
+      color: #ffcf91;
+      text-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
+      margin-bottom: 2rem;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2rem;
+      justify-items: center;
+    }
+
+    .product {
+      background: rgba(44, 18, 12, 0.85);
+      border-radius: 12px;
+      padding: 1.5rem;
+      box-shadow: 0 0 15px rgba(255, 100, 0, 0.4);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      width: 100%;
+      max-width: 300px;
+    }
+
+    .product:hover {
+      transform: scale(1.03);
+      box-shadow: 0 0 25px rgba(255, 150, 60, 0.6);
+    }
+
+    .product img {
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+      box-shadow: 0 0 10px rgba(255, 120, 40, 0.5);
+    }
+
+    .product h3 {
+      color: #ff9b40;
+      text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+      margin: 0.5rem 0;
+    }
+
+    .product p {
+      color: #fff;
+      font-size: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    button, .paypal-button-container {
+      margin-top: 1rem;
+    }
+
+    .back-btn {
+      background-color: #ff7a1f;
+      color: white;
+      border: none;
+      padding: 1rem 2rem;
+      font-size: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.2s ease;
+      box-shadow: 0 0 15px rgba(255, 122, 31, 0.5);
+      margin-top: 3rem;
+    }
+
+    .back-btn:hover {
+      background-color: #ff571a;
+      transform: scale(1.05);
+    }
+
+    footer {
+      background: rgba(42, 15, 10, 0.8);
+      color: #ccc;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      margin-top: auto;
+    }
+  </style>
+  <script src="https://www.paypal.com/sdk/js?client-id=sb&currency=SEK"></script>
+</head>
+
+<body>
+  <header>
+    <img src="loggan.JPG" alt="FastFireUF logotyp" class="logo">
+    <h1 onclick="window.location.href='Fastfireuf.html'">FastFireUF</h1>
+  </header>
+
+  <main>
+    <h2>Våra produkter</h2>
+
+    <div class="product-grid">
+      <div class="product">
+        <img src="https://images.unsplash.com/photo-1759220842352-8f1ad5f82b75?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1497" alt="FastFire Brasa">
+        <h3>FastFire Brasa</h3>
+        <p>Perfekt för äventyraren — ett smidigt, snabbt och säkert tändkit som fungerar i lättare väder.</p>
+        <div class="paypal-button-container" id="paypal-button-container-1"></div>
+      </div>
+
+      <div class="product">
+        <img src="https://images.unsplash.com/photo-1691095744255-0fc8e93c4639?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=880" alt="FastFire Refill">
+        <h3>FastFire Refill</h3>
+        <p>Håll elden vid liv längre. Refillpaket med miljövänligt bränsle – redo för nästa tur.</p>
+        <div class="paypal-button-container" id="paypal-button-container-2"></div>
+      </div>
+
+      <div class="product">
+        <img src="https://images.unsplash.com/photo-1736228972050-1ba200ed7496?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1074" alt="FastFire Inferno">
+        <h3>FastFire Inferno</h3>
+        <p>Allt du behöver för att snabbt komma igång i stormen. Innehåller allt i Brasa inkl stormtändstickor.</p>
+        <div class="paypal-button-container" id="paypal-button-container-3"></div>
+      </div>
+    </div>
+
+    <button class="back-btn" onclick="window.location.href='Fastfireuf.html'">Tillbaka</button>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 FastFireUF | Kontakt: fastfireuf@gmail.com</p>
+  </footer>
+
+  <script>
+    // PayPal-knappar med adressinsamling aktiverad
+    function renderPayPalButton(containerId, description, amount) {
+      paypal.Buttons({
+        style: {
+          layout: 'vertical',
+          color: 'gold',
+          shape: 'rect',
+          label: 'paypal'
+        },
+        createOrder: function(data, actions) {
+          return actions.order.create({
+            purchase_units: [{
+              description: description,
+              amount: { value: amount },
+              shipping: { name: { full_name: '' }, address: {} } // Aktiverar adressinsamling
+            }]
+          });
+        },
+        onApprove: function(data, actions) {
+          return actions.order.capture().then(function(details) {
+            alert('Tack ' + details.payer.name.given_name + '! Din beställning är mottagen.');
+          });
+        }
+      }).render(containerId);
+    }
+
+    renderPayPalButton('#paypal-button-container-1', 'FastFire Tändkit', '149.00');
+    renderPayPalButton('#paypal-button-container-2', 'FastFire Refill', '99.00');
+    renderPayPalButton('#paypal-button-container-3', 'FastFire Startpaket', '229.00');
+  </script>
+</body>
+</html>
