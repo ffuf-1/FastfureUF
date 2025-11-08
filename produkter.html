@@ -18,232 +18,180 @@
     }
 
     header {
+      background: rgba(44, 18, 12, 0.85);
+      padding: 1rem 2rem;
       display: flex;
       align-items: center;
-      background: rgba(44, 18, 12, 0.8);
-      padding: 1rem 2rem;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.6);
-      position: fixed;
-      width: 100%;
-      top: 0;
-      left: 0;
-      z-index: 10;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.5);
     }
 
-    header .logo {
-      width: 70px;
-      height: auto;
+    header img {
+      width: 60px;
       border-radius: 8px;
-      margin-right: 12px;
-      object-fit: contain;
-      box-shadow: 0 0 15px rgba(255, 100, 0, 0.7),
-                  0 0 30px rgba(255, 60, 0, 0.4);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    header .logo:hover {
-      transform: scale(1.05);
-      box-shadow: 0 0 25px rgba(255, 130, 0, 0.9),
-                  0 0 45px rgba(255, 80, 0, 0.6);
+      margin-right: 10px;
     }
 
     header h1 {
       color: #ff7a1f;
-      font-size: 1.6rem;
+      font-size: 1.5rem;
       letter-spacing: 1px;
-      margin: 0;
-      text-shadow: 0 0 10px rgba(255, 120, 40, 0.8);
-      transition: text-shadow 0.3s ease, color 0.3s ease;
-      cursor: pointer;
-    }
-
-    header h1:hover {
-      color: #ff9b40;
-      text-shadow: 0 0 25px rgba(255, 150, 60, 1);
     }
 
     main {
       flex: 1;
-      margin-top: 130px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       padding: 2rem;
-      text-align: center;
-      background: rgba(0,0,0,0.4);
+      background: rgba(0, 0, 0, 0.4);
     }
 
     h2 {
-      font-size: 2.5rem;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      text-shadow: 0 0 10px #000;
       color: #ffcf91;
-      text-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
-      margin-bottom: 2rem;
-    }
-
-    .product-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 2rem;
-      justify-items: center;
     }
 
     .product {
       background: rgba(44, 18, 12, 0.85);
       border-radius: 12px;
       padding: 1.5rem;
-      box-shadow: 0 0 15px rgba(255, 100, 0, 0.4);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      width: 100%;
-      max-width: 300px;
+      margin: 1rem;
+      max-width: 400px;
+      width: 90%;
+      box-shadow: 0 0 15px rgba(0,0,0,0.6);
+      text-align: center;
+      transition: transform 0.3s ease;
     }
 
     .product:hover {
       transform: scale(1.03);
-      box-shadow: 0 0 25px rgba(255, 150, 60, 0.6);
-    }
-
-    .product img {
-      width: 100%;
-      border-radius: 8px;
-      margin-bottom: 1rem;
-      box-shadow: 0 0 10px rgba(255, 120, 40, 0.5);
     }
 
     .product h3 {
-      color: #ff9b40;
-      text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
-      margin: 0.5rem 0;
+      margin-top: 0;
+      color: #ff7a1f;
     }
 
     .product p {
-      color: #fff;
-      font-size: 1rem;
-      margin-bottom: 1rem;
+      font-size: 1.1rem;
+      color: #f4f4f4;
     }
 
-    button, .paypal-button-container {
-      margin-top: 1rem;
-    }
-
-    .back-btn {
+    .back-button {
+      margin-top: 2rem;
       background-color: #ff7a1f;
       color: white;
       border: none;
       padding: 1rem 2rem;
-      font-size: 1rem;
       border-radius: 8px;
+      font-size: 1rem;
       cursor: pointer;
-      transition: background 0.3s ease, transform 0.2s ease;
-      box-shadow: 0 0 15px rgba(255, 122, 31, 0.5);
-      margin-top: 3rem;
+      box-shadow: 0 0 10px rgba(255, 122, 31, 0.6);
+      transition: background 0.3s ease;
     }
 
-    .back-btn:hover {
+    .back-button:hover {
       background-color: #ff571a;
-      transform: scale(1.05);
     }
 
     footer {
-      background: rgba(42, 15, 10, 0.8);
-      color: #ccc;
+      background: rgba(42, 15, 10, 0.85);
       text-align: center;
       padding: 1rem;
+      color: #ccc;
       font-size: 0.9rem;
-      margin-top: auto;
     }
   </style>
-  <script src="https://www.paypal.com/sdk/js?client-id=sb&currency=SEK"></script>
 </head>
-
 <body>
+
   <header>
-    <img src="loggan.JPG" alt="FastFireUF logotyp" class="logo">
-    <h1 onclick="window.location.href='index.html'">FastFireUF</h1>
+    <img src="8C3840A3-05BD-4DDC-925E-C9278ABF56AD.JPG" alt="FastFireUF logotyp">
+    <h1>FastFireUF</h1>
   </header>
 
   <main>
     <h2>Våra produkter</h2>
 
-    <div class="product-grid">
-      <div class="product">
-        <img src="https://images.unsplash.com/photo-1759220842352-8f1ad5f82b75?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1497" alt="FastFire Brasa">
-        <h3>FastFire Brasa</h3>
-        <p>Perfekt för äventyraren — ett smidigt, snabbt och säkert tändkit som fungerar i lättare väder.</p>
-        <div class="paypal-button-container" id="paypal-button-container-1"></div>
-      </div>
-
-      <div class="product">
-        <img src="https://images.unsplash.com/photo-1691095744255-0fc8e93c4639?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=880" alt="FastFire Refill">
-        <h3>FastFire Refill</h3>
-        <p>Håll elden vid liv längre. Refillpaket med miljövänligt bränsle – redo för nästa tur.</p>
-        <div class="paypal-button-container" id="paypal-button-container-2"></div>
-      </div>
-
-      <div class="product">
-        <img src="https://images.unsplash.com/photo-1736228972050-1ba200ed7496?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1074" alt="FastFire Inferno">
-        <h3>FastFire Inferno</h3>
-        <p>Allt du behöver för att snabbt komma igång i stormen. Innehåller allt i Brasa inkl stormtändstickor.</p>
-        <div class="paypal-button-container" id="paypal-button-container-3"></div>
-      </div>
+    <div class="product">
+      <h3 class="product-name">FastFire Tändkit</h3>
+      <p class="product-price">149 SEK</p>
+      <div id="paypal-button-container-1"></div>
     </div>
 
-    <button class="back-btn" onclick="window.location.href='index.html'">Tillbaka</button>
+    <div class="product">
+      <h3 class="product-name">FastFire Refill</h3>
+      <p class="product-price">99 SEK</p>
+      <div id="paypal-button-container-2"></div>
+    </div>
+
+    <div class="product">
+      <h3 class="product-name">FastFire Startpaket</h3>
+      <p class="product-price">229 SEK</p>
+      <div id="paypal-button-container-3"></div>
+    </div>
+
+    <button class="back-button" onclick="window.location.href='/'">Tillbaka</button>
   </main>
 
   <footer>
     <p>&copy; 2025 FastFireUF | Kontakt: fastfireuf@gmail.com</p>
   </footer>
 
-<!-- Ladda PayPal SDK -->
-<script src="https://www.paypal.com/sdk/js?client-id=sb&currency=SEK&enable-funding=card"></script>
+  <!-- PAYPAL SDK -->
+  <script src="https://www.paypal.com/sdk/js?client-id=sb&currency=SEK&enable-funding=card"></script>
 
-<script>
-  // Vänta tills PayPal är inläst
-  document.addEventListener("DOMContentLoaded", function() {
+  <!-- PAYPAL SCRIPT -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
 
-    function renderPayPalButton(containerId, description, amount) {
-      paypal.Buttons({
-        style: {
-          layout: 'vertical',
-          color: 'gold',
-          shape: 'rect',
-          label: 'paypal'
-        },
-        // Skapa beställningen
-        createOrder: function(data, actions) {
-          return actions.order.create({
-            purchase_units: [{
-              description: description,
-              amount: {
-                currency_code: "SEK",
-                value: amount
+      const products = document.querySelectorAll('.product');
+
+      products.forEach((product, index) => {
+        const name = product.querySelector('.product-name').textContent.trim();
+        const priceText = product.querySelector('.product-price').textContent.trim();
+        const price = parseFloat(priceText.replace(/[^\d.,]/g, '').replace(',', '.'));
+        const containerId = `#paypal-button-container-${index + 1}`;
+
+        paypal.Buttons({
+          style: {
+            layout: 'vertical',
+            color: 'gold',
+            shape: 'rect',
+            label: 'paypal'
+          },
+          createOrder: function(data, actions) {
+            return actions.order.create({
+              purchase_units: [{
+                description: name,
+                amount: {
+                  currency_code: "SEK",
+                  value: price.toFixed(2)
+                }
+              }],
+              application_context: {
+                shipping_preference: "GET_FROM_FILE"
               }
-            }],
-            application_context: {
-              shipping_preference: "GET_FROM_FILE" // Gör så PayPal samlar in adressen
-            }
-          });
-        },
-        // När betalningen godkänns
-        onApprove: function(data, actions) {
-          return actions.order.capture().then(function(details) {
-            alert('Tack ' + details.payer.name.given_name + '! Din beställning är mottagen.');
-          });
-        },
-        // Fångar fel
-        onError: function(err) {
-          console.error("PayPal-fel:", err);
-        }
-      }).render(containerId);
-    }
+            });
+          },
+          onApprove: function(data, actions) {
+            return actions.order.capture().then(function(details) {
+              alert('Tack ' + details.payer.name.given_name + '! Din beställning av ' + name + ' är mottagen.');
+            });
+          },
+          onError: function(err) {
+            console.error("PayPal-fel:", err);
+          }
+        }).render(containerId);
+      });
 
-    // Rendera alla tre knappar
-    renderPayPalButton('#paypal-button-container-1', 'FastFire Tändkit', '149.00');
-    renderPayPalButton('#paypal-button-container-2', 'FastFire Refill', '99.00');
-    renderPayPalButton('#paypal-button-container-3', 'FastFire Startpaket', '229.00');
+    });
+  </script>
 
-  });
-</script>
 </body>
 </html>
-
 
 
 
