@@ -6,6 +6,15 @@
   <title>Våra produkter | FastFireUF</title>
   <link rel="icon" type="image/jpg" href="loggan.JPG">
   <style>
+
+.product-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin: 0.5rem 0 1rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.4);
+}
+    
     .product-description {
   font-size: 0.95rem;
   color: #ddd;
@@ -134,34 +143,44 @@
     <h1 onclick="window.location.href='index.html'">FastFireUF</h1>
   </header>
 
-  <main>
-    <h2>Våra produkter</h2>
+<main>
+  <h2>Våra produkter</h2>
 
-    <div class="product">
-      <h3 class="product-name">FastFire Brasa</h3>
-      <p class="product-price">149 SEK</p>
-  <p class="product-description">
-    Innehåll: 
-    Eldplugg, tändstål, tändstickor, sågspån
-  </p>
-      <div id="paypal-button-container-1"></div>
-    </div>
+  <div class="product">
+    <h3 class="product-name">FastFire Brasa</h3>
+    <p class="product-price">149 SEK</p>
+    <p class="product-description">
+      Innehåll: 
+      Eldplugg, tändstål, tändstickor, sågspån
+    </p>
+    <img src="https://chatgpt.com/backend-api/estuary/content?id=file_00000000a47871f49532c3aef9e4ba2a&ts=489681&p=fs&cid=1&sig=33f10f09d50738eff0c7fd7ed8d76ac7c384dd1d7a46a0a20a69c5d9482ab828&v=0" 
+         alt="FastFire Brasa produktbild" class="product-image">
+    <div id="paypal-button-container-1"></div>
+  </div>
 
-    <div class="product">
-      <h3 class="product-name">FastFire Inferno</h3>
-      <p class="product-price">229 SEK</p>
-      <p class="product-description">
+  <div class="product">
+    <h3 class="product-name">FastFire Inferno</h3>
+    <p class="product-price">229 SEK</p>
+    <p class="product-description">
       Innehåll:
       Eldplugg, tändstål, stormtändstickor, sågspån med stearin
-  </p>
-      <div id="paypal-button-container-3"></div>
-    </div>
-    
-    <div class="product">
-      <h3 class="product-name">FastFire Refill</h3>
-      <p class="product-price">99 SEK</p>
-      <div id="paypal-button-container-2"></div>
-    </div>
+    </p>
+    <img src="https://chatgpt.com/backend-api/estuary/content?id=file_00000000c69071f4a4c7bcf08d870b4f&ts=489682&p=fs&cid=1&sig=9ccdd288524b7110cf5c924d3b8ffcc6962fde2fc5d7c1b11e1e45bab15ee6b3&v=0" 
+         alt="FastFire Inferno produktbild" class="product-image">
+    <div id="paypal-button-container-3"></div>
+  </div>
+
+  <div class="product">
+    <h3 class="product-name">FastFire Refill</h3>
+    <p class="product-price">99 SEK</p>
+    <p class="product-description">
+      Innehåll:
+      Refillpåse med sågspån och stearin för lång brinntid
+    </p>
+    <img src="https://images.unsplash.com/photo-1605559424843-6d1d5225dfc8?auto=format&fit=crop&w=600&q=80" 
+         alt="FastFire Refill produktbild" class="product-image">
+    <div id="paypal-button-container-2"></div>
+  </div>
 
 
     <button class="back-button" onclick="window.location.href='index.html'">Tillbaka</button>
@@ -223,6 +242,7 @@
 
 </body>
 </html>
+
 
 
 
